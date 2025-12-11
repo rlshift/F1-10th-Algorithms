@@ -1,0 +1,32 @@
+[0.420s] Invoking command in '/home/matthew/sim_ws/src/follow_the_gap': CONDA_PROMPT_MODIFIER=(base) DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/matthew/sim_ws/src/follow_the_gap/build/follow_the_gap/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/matthew/sim_ws/src/follow_the_gap/install/follow_the_gap/lib/python3.12/site-packages: /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base build/follow_the_gap build --build-base /home/matthew/sim_ws/src/follow_the_gap/build/follow_the_gap/build install --record /home/matthew/sim_ws/src/follow_the_gap/build/follow_the_gap/install.log --single-version-externally-managed install_data
+[0.526s] running egg_info
+[0.526s] creating build/follow_the_gap/follow_the_gap.egg-info
+[0.531s] writing build/follow_the_gap/follow_the_gap.egg-info/PKG-INFO
+[0.531s] writing dependency_links to build/follow_the_gap/follow_the_gap.egg-info/dependency_links.txt
+[0.531s] writing requirements to build/follow_the_gap/follow_the_gap.egg-info/requires.txt
+[0.531s] writing top-level names to build/follow_the_gap/follow_the_gap.egg-info/top_level.txt
+[0.531s] writing manifest file 'build/follow_the_gap/follow_the_gap.egg-info/SOURCES.txt'
+[0.542s] reading manifest file 'build/follow_the_gap/follow_the_gap.egg-info/SOURCES.txt'
+[0.542s] writing manifest file 'build/follow_the_gap/follow_the_gap.egg-info/SOURCES.txt'
+[0.542s] running build
+[0.542s] running build_py
+[0.542s] creating /home/matthew/sim_ws/src/follow_the_gap/build/follow_the_gap/build
+[0.542s] creating /home/matthew/sim_ws/src/follow_the_gap/build/follow_the_gap/build/lib
+[0.542s] creating /home/matthew/sim_ws/src/follow_the_gap/build/follow_the_gap/build/lib/follow_the_gap
+[0.542s] copying follow_the_gap/__init__.py -> /home/matthew/sim_ws/src/follow_the_gap/build/follow_the_gap/build/lib/follow_the_gap
+[0.542s] running install
+[0.546s] running install_lib
+[0.552s] creating /home/matthew/sim_ws/src/follow_the_gap/install/follow_the_gap/lib/python3.12/site-packages/follow_the_gap
+[0.552s] copying /home/matthew/sim_ws/src/follow_the_gap/build/follow_the_gap/build/lib/follow_the_gap/__init__.py -> /home/matthew/sim_ws/src/follow_the_gap/install/follow_the_gap/lib/python3.12/site-packages/follow_the_gap
+[0.552s] byte-compiling /home/matthew/sim_ws/src/follow_the_gap/install/follow_the_gap/lib/python3.12/site-packages/follow_the_gap/__init__.py to __init__.cpython-312.pyc
+[0.553s] running install_data
+[0.553s] creating /home/matthew/sim_ws/src/follow_the_gap/install/follow_the_gap/share/ament_index
+[0.553s] creating /home/matthew/sim_ws/src/follow_the_gap/install/follow_the_gap/share/ament_index/resource_index
+[0.553s] creating /home/matthew/sim_ws/src/follow_the_gap/install/follow_the_gap/share/ament_index/resource_index/packages
+[0.553s] copying resource/follow_the_gap -> /home/matthew/sim_ws/src/follow_the_gap/install/follow_the_gap/share/ament_index/resource_index/packages
+[0.553s] copying package.xml -> /home/matthew/sim_ws/src/follow_the_gap/install/follow_the_gap/share/follow_the_gap
+[0.553s] running install_egg_info
+[0.559s] Copying build/follow_the_gap/follow_the_gap.egg-info to /home/matthew/sim_ws/src/follow_the_gap/install/follow_the_gap/lib/python3.12/site-packages/follow_the_gap-0.0.0-py3.12.egg-info
+[0.559s] running install_scripts
+[0.605s] writing list of installed files to '/home/matthew/sim_ws/src/follow_the_gap/build/follow_the_gap/install.log'
+[0.622s] Invoked command in '/home/matthew/sim_ws/src/follow_the_gap' returned '0': CONDA_PROMPT_MODIFIER=(base) DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/matthew/sim_ws/src/follow_the_gap/build/follow_the_gap/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/matthew/sim_ws/src/follow_the_gap/install/follow_the_gap/lib/python3.12/site-packages: /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base build/follow_the_gap build --build-base /home/matthew/sim_ws/src/follow_the_gap/build/follow_the_gap/build install --record /home/matthew/sim_ws/src/follow_the_gap/build/follow_the_gap/install.log --single-version-externally-managed install_data

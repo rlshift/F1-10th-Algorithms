@@ -1,0 +1,24 @@
+[0.511s] Invoking command in '/home/matthew/sim_ws/src/follow_the_gap': CONDA_PROMPT_MODIFIER=(base) DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/matthew/sim_ws/src/follow_the_gap/build/follow_the_gap/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/matthew/sim_ws/src/follow_the_gap/install/follow_the_gap/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base build/follow_the_gap build --build-base /home/matthew/sim_ws/src/follow_the_gap/build/follow_the_gap/build install --record /home/matthew/sim_ws/src/follow_the_gap/build/follow_the_gap/install.log --single-version-externally-managed install_data
+[0.681s] running egg_info
+[0.692s] writing build/follow_the_gap/follow_the_gap.egg-info/PKG-INFO
+[0.692s] writing dependency_links to build/follow_the_gap/follow_the_gap.egg-info/dependency_links.txt
+[0.692s] writing entry points to build/follow_the_gap/follow_the_gap.egg-info/entry_points.txt
+[0.693s] writing requirements to build/follow_the_gap/follow_the_gap.egg-info/requires.txt
+[0.693s] writing top-level names to build/follow_the_gap/follow_the_gap.egg-info/top_level.txt
+[0.716s] reading manifest file 'build/follow_the_gap/follow_the_gap.egg-info/SOURCES.txt'
+[0.716s] writing manifest file 'build/follow_the_gap/follow_the_gap.egg-info/SOURCES.txt'
+[0.717s] running build
+[0.717s] running build_py
+[0.717s] copying follow_the_gap/follow_the_gap.py -> /home/matthew/sim_ws/src/follow_the_gap/build/follow_the_gap/build/lib/follow_the_gap
+[0.717s] running install
+[0.721s] running install_lib
+[0.733s] copying /home/matthew/sim_ws/src/follow_the_gap/build/follow_the_gap/build/lib/follow_the_gap/follow_the_gap.py -> /home/matthew/sim_ws/src/follow_the_gap/install/follow_the_gap/lib/python3.12/site-packages/follow_the_gap
+[0.734s] byte-compiling /home/matthew/sim_ws/src/follow_the_gap/install/follow_the_gap/lib/python3.12/site-packages/follow_the_gap/follow_the_gap.py to follow_the_gap.cpython-312.pyc
+[0.735s] running install_data
+[0.735s] running install_egg_info
+[0.748s] removing '/home/matthew/sim_ws/src/follow_the_gap/install/follow_the_gap/lib/python3.12/site-packages/follow_the_gap-0.0.0-py3.12.egg-info' (and everything under it)
+[0.748s] Copying build/follow_the_gap/follow_the_gap.egg-info to /home/matthew/sim_ws/src/follow_the_gap/install/follow_the_gap/lib/python3.12/site-packages/follow_the_gap-0.0.0-py3.12.egg-info
+[0.748s] running install_scripts
+[0.828s] Installing follow_the_gap script to /home/matthew/sim_ws/src/follow_the_gap/install/follow_the_gap/lib/follow_the_gap
+[0.828s] writing list of installed files to '/home/matthew/sim_ws/src/follow_the_gap/build/follow_the_gap/install.log'
+[0.847s] Invoked command in '/home/matthew/sim_ws/src/follow_the_gap' returned '0': CONDA_PROMPT_MODIFIER=(base) DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/matthew/sim_ws/src/follow_the_gap/build/follow_the_gap/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/matthew/sim_ws/src/follow_the_gap/install/follow_the_gap/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base build/follow_the_gap build --build-base /home/matthew/sim_ws/src/follow_the_gap/build/follow_the_gap/build install --record /home/matthew/sim_ws/src/follow_the_gap/build/follow_the_gap/install.log --single-version-externally-managed install_data
