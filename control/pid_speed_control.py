@@ -129,8 +129,8 @@ if __name__ == "__main__":
     # Try 2: Perfect Tuning (kp=2.0, ki=1.5, kd=0.1) -> Should work well
     # Try 3: Oscillation (kp=15.0, ki=0, kd=0) -> Should wobble
     
-    kp_val = 1.5
-    ki_val = 4.0
+    kp_val = 2.0
+    ki_val = 1.0
     kd_val = 0.1
     
     times, targets, actuals = run_experiment(kp_val, ki_val, kd_val)
