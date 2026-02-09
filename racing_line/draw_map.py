@@ -1,25 +1,34 @@
-racing_map = [
-    [1, 1, 1, 1, 1, 1, 1, 1, 1],
-    [1, 0, 0, 0, 1, 0, 0, 0, 1],
-    [1, 0, 1, 0, 0, 0, 1, 0, 1],
-    [1, 0, 1, 1, 1, 1, 1, 0, 1],
-    [1, 0, 1, 1, 1, 1, 1, 0, 1],
-    [1, 0, 0, 1, 1, 1, 0, 0, 1],
-    [1, 0, 0, 0, 'F', 0, 0, 1, 1],
-    [1, 1, 1, 1, 1, 1, 1, 1, 1]
-]
+from run import controls, waypoints, track_map, test_map
+from speed import Controls
+# FIX Holding and not accelerating for a majority of the track 
 # 0 is the road, 1 is the wall, 'F' is the start finish line
 
 def draw_map(map_array):
-    for i in range(len(map_array)):
-        for j in range(len(map_array[0])):
+    first = False
+    for i in range(30):
+        for j in range(30):
             cell = map_array[i][j]
-            if cell == 0:
-                print("⬛", end=" ")
-            elif cell == 1:
-                print("⬜", end=" ")
-            elif cell == 'F':
-                print("🏁", end=" ")
-        print("\n")
 
-draw_map(racing_map)
+            for n in range(len(waypoints)):
+                isCell = waypoints[n][0] == i and waypoints[n][1] == j
+                if (isCell):
+                    if (first == False):
+                        print("🏁", end=" ")
+                        first = True
+                    elif (controls[n] == Controls.ACCEL):
+                        print("🟩", end=" ")
+                    elif (controls[n] == Controls.BRAKE):
+                        print("🟥", end=" ")
+                    elif (controls[n] == Controls.HOLD):
+                        print("🟨", end=" ")
+                    break
+            if (not isCell):
+                if cell == 0:
+                    print("⬛", end=" ")
+                elif cell == 1:
+                    print("⬜", end=" ")
+
+        print("")
+
+
+draw_map(track_map)
