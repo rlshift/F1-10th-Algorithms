@@ -146,8 +146,10 @@ class ReactiveFollowGap(Node):
 
         # Publish
         current_steering_abs = abs(steering_angle)
-        max_speed = 4.0
-        min_speed = 1.5
+        #max_speed = 4.0
+        max_speed = 1.5
+        #min_speed = 1.5
+        min_speed = 1.0
         max_turn = 0.4 # radians
 
         speed_ratio = np.clip(current_steering_abs / max_turn, 0.0, 1.0)
@@ -159,12 +161,29 @@ class ReactiveFollowGap(Node):
         drive_msg.drive.speed = float(speed)
         self.drive_pub.publish(drive_msg)
 
+    def stop_vehicle(self):
+        """Publishes a zero-velocity command to halt the car."""
+        drive_msg = AckermannDriveStamped()
+        drive_msg.drive.speed = 0.0
+        drive_msg.drive.steering_angle = 0.0
+        self.drive_pub.publish(drive_msg)
+        self.get_logger().info('STOP COMMAND SENT: Vehicle halting.')
+
 def main(args=None):
     rclpy.init(args=args)
     node = ReactiveFollowGap()
-    rclpy.spin(node)
-    node.destroy_node()
-    rclpy.shutdown()
+    
+    try:
+        rclpy.spin(node)
+    except KeyboardInterrupt:
+        # ctrl+c
+        node.stop_vehicle()
+    except Exception as e:
+        node.get_logger().error(f'ERROR: {e}')
+    finally:
+        # Cleanup
+        node.destroy_node()
+        rclpy.shutdown()
 
 if __name__ == '__main__':
     main()
