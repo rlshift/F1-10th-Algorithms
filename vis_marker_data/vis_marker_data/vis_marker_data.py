@@ -16,16 +16,21 @@ class WaypointMarkerPublisher(Node):
         self.timer = self.create_timer(1.0, self.timer_callback)
         
         # Replace this with your actual x, y, heading (in radians) data
-        self.load_waypoints("/home/matthew/PurePursuitWaypoints/0_track.csv")
+        self.load_waypoints("/home/matthew/PurePursuitWaypoints/8_track.csv")
 
     def load_waypoints(self, filename):
         # Load x, y, yaw from csv
         with open(filename) as file:
             reader = csv.reader(file)
             self.waypoints = [tuple(map(float, row)) for row in reader]
+        
+        if(len(self.waypoints[0]) == 4):
+            temp = [(x, y, yaw) for (_, x, y, yaw) in self.waypoints]
+            self.waypoints = temp
 
 
     def euler_to_quaternion(self, yaw_):
+        yaw_ = yaw_ - 90
         yaw = yaw_ * 3.14159265 / 180
         # Converts a 2D yaw angle to a 3D quaternion
         qw = math.cos(yaw * 0.5)
@@ -64,9 +69,9 @@ class WaypointMarkerPublisher(Node):
             marker.pose.orientation.w = qw
             
             # Scale the arrow (x is length, y is width, z is height)
-            marker.scale.x = 0.5  
-            marker.scale.y = 0.1  
-            marker.scale.z = 0.1  
+            marker.scale.x = 0.05  
+            marker.scale.y = 0.01  
+            marker.scale.z = 0.01  
             
             # Set the color (RGBA, values range from 0.0 to 1.0)
             marker.color.r = 0.0
