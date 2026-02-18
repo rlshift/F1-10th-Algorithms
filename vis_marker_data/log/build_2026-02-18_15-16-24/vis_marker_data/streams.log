@@ -1,0 +1,21 @@
+[1.013s] Invoking command in '/home/matthew/sim_ws/src/vis_marker_data': CONDA_PROMPT_MODIFIER=(base) DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/matthew/sim_ws/src/vis_marker_data/build/vis_marker_data/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/matthew/sim_ws/src/vis_marker_data/install/vis_marker_data/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base build/vis_marker_data build --build-base /home/matthew/sim_ws/src/vis_marker_data/build/vis_marker_data/build install --record /home/matthew/sim_ws/src/vis_marker_data/build/vis_marker_data/install.log --single-version-externally-managed install_data
+[1.330s] running egg_info
+[1.351s] writing build/vis_marker_data/vis_marker_data.egg-info/PKG-INFO
+[1.351s] writing dependency_links to build/vis_marker_data/vis_marker_data.egg-info/dependency_links.txt
+[1.352s] writing entry points to build/vis_marker_data/vis_marker_data.egg-info/entry_points.txt
+[1.352s] writing requirements to build/vis_marker_data/vis_marker_data.egg-info/requires.txt
+[1.352s] writing top-level names to build/vis_marker_data/vis_marker_data.egg-info/top_level.txt
+[1.394s] reading manifest file 'build/vis_marker_data/vis_marker_data.egg-info/SOURCES.txt'
+[1.396s] writing manifest file 'build/vis_marker_data/vis_marker_data.egg-info/SOURCES.txt'
+[1.396s] running build
+[1.396s] running build_py
+[1.396s] running install
+[1.404s] running install_lib
+[1.426s] running install_data
+[1.426s] running install_egg_info
+[1.450s] removing '/home/matthew/sim_ws/src/vis_marker_data/install/vis_marker_data/lib/python3.12/site-packages/vis_marker_data-0.0.0-py3.12.egg-info' (and everything under it)
+[1.450s] Copying build/vis_marker_data/vis_marker_data.egg-info to /home/matthew/sim_ws/src/vis_marker_data/install/vis_marker_data/lib/python3.12/site-packages/vis_marker_data-0.0.0-py3.12.egg-info
+[1.450s] running install_scripts
+[1.598s] Installing vis_marker_data script to /home/matthew/sim_ws/src/vis_marker_data/install/vis_marker_data/lib/vis_marker_data
+[1.598s] writing list of installed files to '/home/matthew/sim_ws/src/vis_marker_data/build/vis_marker_data/install.log'
+[1.648s] Invoked command in '/home/matthew/sim_ws/src/vis_marker_data' returned '0': CONDA_PROMPT_MODIFIER=(base) DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/matthew/sim_ws/src/vis_marker_data/build/vis_marker_data/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/matthew/sim_ws/src/vis_marker_data/install/vis_marker_data/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base build/vis_marker_data build --build-base /home/matthew/sim_ws/src/vis_marker_data/build/vis_marker_data/build install --record /home/matthew/sim_ws/src/vis_marker_data/build/vis_marker_data/install.log --single-version-externally-managed install_data

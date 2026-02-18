@@ -1,0 +1,19 @@
+running egg_info
+writing build/vis_marker_data/vis_marker_data.egg-info/PKG-INFO
+writing dependency_links to build/vis_marker_data/vis_marker_data.egg-info/dependency_links.txt
+writing entry points to build/vis_marker_data/vis_marker_data.egg-info/entry_points.txt
+writing requirements to build/vis_marker_data/vis_marker_data.egg-info/requires.txt
+writing top-level names to build/vis_marker_data/vis_marker_data.egg-info/top_level.txt
+reading manifest file 'build/vis_marker_data/vis_marker_data.egg-info/SOURCES.txt'
+writing manifest file 'build/vis_marker_data/vis_marker_data.egg-info/SOURCES.txt'
+running build
+running build_py
+running install
+running install_lib
+running install_data
+running install_egg_info
+removing '/home/matthew/sim_ws/src/vis_marker_data/install/vis_marker_data/lib/python3.12/site-packages/vis_marker_data-0.0.0-py3.12.egg-info' (and everything under it)
+Copying build/vis_marker_data/vis_marker_data.egg-info to /home/matthew/sim_ws/src/vis_marker_data/install/vis_marker_data/lib/python3.12/site-packages/vis_marker_data-0.0.0-py3.12.egg-info
+running install_scripts
+Installing vis_marker_data script to /home/matthew/sim_ws/src/vis_marker_data/install/vis_marker_data/lib/vis_marker_data
+writing list of installed files to '/home/matthew/sim_ws/src/vis_marker_data/build/vis_marker_data/install.log'

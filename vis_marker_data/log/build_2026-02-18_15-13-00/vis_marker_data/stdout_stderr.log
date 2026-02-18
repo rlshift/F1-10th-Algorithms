@@ -1,0 +1,32 @@
+running egg_info
+creating build/vis_marker_data/vis_marker_data.egg-info
+writing build/vis_marker_data/vis_marker_data.egg-info/PKG-INFO
+writing dependency_links to build/vis_marker_data/vis_marker_data.egg-info/dependency_links.txt
+writing entry points to build/vis_marker_data/vis_marker_data.egg-info/entry_points.txt
+writing requirements to build/vis_marker_data/vis_marker_data.egg-info/requires.txt
+writing top-level names to build/vis_marker_data/vis_marker_data.egg-info/top_level.txt
+writing manifest file 'build/vis_marker_data/vis_marker_data.egg-info/SOURCES.txt'
+reading manifest file 'build/vis_marker_data/vis_marker_data.egg-info/SOURCES.txt'
+writing manifest file 'build/vis_marker_data/vis_marker_data.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/matthew/sim_ws/src/vis_marker_data/build/vis_marker_data/build
+creating /home/matthew/sim_ws/src/vis_marker_data/build/vis_marker_data/build/lib
+creating /home/matthew/sim_ws/src/vis_marker_data/build/vis_marker_data/build/lib/vis_marker_data
+copying vis_marker_data/__init__.py -> /home/matthew/sim_ws/src/vis_marker_data/build/vis_marker_data/build/lib/vis_marker_data
+running install
+running install_lib
+creating /home/matthew/sim_ws/src/vis_marker_data/install/vis_marker_data/lib/python3.12/site-packages/vis_marker_data
+copying /home/matthew/sim_ws/src/vis_marker_data/build/vis_marker_data/build/lib/vis_marker_data/__init__.py -> /home/matthew/sim_ws/src/vis_marker_data/install/vis_marker_data/lib/python3.12/site-packages/vis_marker_data
+byte-compiling /home/matthew/sim_ws/src/vis_marker_data/install/vis_marker_data/lib/python3.12/site-packages/vis_marker_data/__init__.py to __init__.cpython-312.pyc
+running install_data
+creating /home/matthew/sim_ws/src/vis_marker_data/install/vis_marker_data/share/ament_index
+creating /home/matthew/sim_ws/src/vis_marker_data/install/vis_marker_data/share/ament_index/resource_index
+creating /home/matthew/sim_ws/src/vis_marker_data/install/vis_marker_data/share/ament_index/resource_index/packages
+copying resource/vis_marker_data -> /home/matthew/sim_ws/src/vis_marker_data/install/vis_marker_data/share/ament_index/resource_index/packages
+copying package.xml -> /home/matthew/sim_ws/src/vis_marker_data/install/vis_marker_data/share/vis_marker_data
+running install_egg_info
+Copying build/vis_marker_data/vis_marker_data.egg-info to /home/matthew/sim_ws/src/vis_marker_data/install/vis_marker_data/lib/python3.12/site-packages/vis_marker_data-0.0.0-py3.12.egg-info
+running install_scripts
+Installing vis_marker_data script to /home/matthew/sim_ws/src/vis_marker_data/install/vis_marker_data/lib/vis_marker_data
+writing list of installed files to '/home/matthew/sim_ws/src/vis_marker_data/build/vis_marker_data/install.log'

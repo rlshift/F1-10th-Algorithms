@@ -1,0 +1,16 @@
+package.xml
+setup.cfg
+setup.py
+build/vis_marker_data/vis_marker_data.egg-info/PKG-INFO
+build/vis_marker_data/vis_marker_data.egg-info/SOURCES.txt
+build/vis_marker_data/vis_marker_data.egg-info/dependency_links.txt
+build/vis_marker_data/vis_marker_data.egg-info/entry_points.txt
+build/vis_marker_data/vis_marker_data.egg-info/requires.txt
+build/vis_marker_data/vis_marker_data.egg-info/top_level.txt
+build/vis_marker_data/vis_marker_data.egg-info/zip-safe
+resource/vis_marker_data
+test/test_copyright.py
+test/test_flake8.py
+test/test_pep257.py
+vis_marker_data/__init__.py
+vis_marker_data/vis_marker_data.py

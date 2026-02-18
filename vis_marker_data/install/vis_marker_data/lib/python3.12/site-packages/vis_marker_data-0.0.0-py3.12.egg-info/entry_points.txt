@@ -1,0 +1,2 @@
+[console_scripts]
+vis_marker_data = vis_marker_data.vis_marker_data:main
