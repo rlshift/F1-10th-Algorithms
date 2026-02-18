@@ -1,5 +1,4 @@
 import math
-from map import track_map
 
 class Controls:
     ## 1 is reserved for racing line at the moment
@@ -37,27 +36,22 @@ def calculate_curvature(p1, p2, p3):
     return angle
 
 def calculate_max_speeds(waypoints, corner_data, base_speed, min_corner_speed):
-    # Calculate maximum safe speed at each waypoint based on curvature.
     max_speeds = []
     
     for i in range(len(waypoints)):
         if i == 0 or i == len(waypoints) - 1:
-            # First and last points - use moderate speed
-            max_speeds.append(base_speed * 0.5) # NOTE assumes vehicle starts at speed of 5/10
+            max_speeds.append(base_speed * 0.5)
         else:
-            # Calculate curvature
-            waypoint_info = corner_data[i]
-            cp = waypoint_info['cp']
+            cp = corner_data[i]['cp']
             
-            # Check if it is straight
             if cp == 0:
                 max_speeds.append(base_speed)
             else:
-                # Scale speed by corner tightness 
-                # cp is the angle between the current waypoint to the next waypoint
-                corner_factor = abs(cp) / 9.0  # Normalize to 0-1
-                speed_reduction = corner_factor * (base_speed - min_corner_speed)
-                max_speeds.append(base_speed - speed_reduction)
+                # Use inverse relationship: tighter turn (bigger |cp|) = slower speed
+                # Cap at reasonable maximum curvature
+                max_cp = 50.0  # Adjust based on your track
+                corner_factor = min(1.0, abs(cp) / max_cp)
+                max_speeds.append(base_speed * (1.0 - corner_factor * 0.8) + min_corner_speed * 0.2)
     
     return max_speeds
 

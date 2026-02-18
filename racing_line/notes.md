@@ -1,6 +1,8 @@
 # Next Steps: 
 1. Draw racing line, ie. if right turn then move left before turning 
 2. Implement time into speed 
+   - go through different versions of the map and calculate which one will finish faster
+3. Smooth racing line - optimise and direct it to a certain direction
 
 # Active Files: 
 - run.py --> central running platform for all files

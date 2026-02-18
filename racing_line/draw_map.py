@@ -1,12 +1,13 @@
-from run import controls, waypoints, track_map, test_map
+from run import controls, waypoints, track, test_map
 from speed import Controls
-# FIX Holding and not accelerating for a majority of the track 
+# DONE Holding and not accelerating for a majority of the track 
 # 0 is the road, 1 is the wall, 'F' is the start finish line
 
 def draw_map(map_array):
     first = False
-    for i in range(30):
-        for j in range(30):
+    print(f"Waypoints: {waypoints}")
+    for i in range(len(map_array)):
+        for j in range(len(map_array[0])):
             cell = map_array[i][j]
 
             for n in range(len(waypoints)):
@@ -31,4 +32,4 @@ def draw_map(map_array):
         print("")
 
 
-draw_map(track_map)
+draw_map(track)

@@ -2,8 +2,7 @@
 # NOTE This analysis is for a track that goes clockwise, swap right for left if going anti-clockwise
 # ---------------------------------------------------------------------
 
-def analyze_track_from_grid(grid):
-    # Extract 3x3 block centers
+def analyze_track_from_grid(grid, track_width):
     centers = []
     for r in range(1, len(grid) - 1):
         for c in range(1, len(grid[0]) - 1):
@@ -11,7 +10,7 @@ def analyze_track_from_grid(grid):
             if all(grid[r+i][c+j] == 1 for i in [-1,0,1] for j in [-1,0,1]):
                 # To avoid duplicate centers for the same block, 
                 # we only take every 3rd coordinate
-                if r % 3 == 1 and c % 3 == 1:
+                if r % track_width== 1 and c % track_width == 1:
                     centers.append([r, c])
 
     # Sort centers into a continuous path (Nearest Neighbor)
@@ -56,7 +55,7 @@ def get_waypoints(results):
     for i in results:
         ret.append(i['coord'])
     return ret
-
+# WIP Work in progress
 def generate_racing_line(analysis, offset_distance=0.4):
     """
     Generate racing line waypoints offset from center:
