@@ -5,6 +5,7 @@ from speed import Controls
 
 def draw_map(map_array):
     first = False
+    isCell = False
     print(f"Waypoints: {waypoints}")
     for i in range(len(map_array)):
         for j in range(len(map_array[0])):
@@ -14,7 +15,7 @@ def draw_map(map_array):
                 isCell = waypoints[n][0] == i and waypoints[n][1] == j
                 if (isCell):
                     if (first == False):
-                        print("🏁", end=" ")
+                        print("🟩", end=" ")
                         first = True
                     elif (controls[n] == Controls.ACCEL):
                         print("🟩", end=" ")

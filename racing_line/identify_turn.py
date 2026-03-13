@@ -1,6 +1,35 @@
 # ---------------------------------------------------------------------
 # NOTE This analysis is for a track that goes clockwise, swap right for left if going anti-clockwise
 # ---------------------------------------------------------------------
+def measure_track_width(grid):
+    """Sample the grid to find the median track width, returns a good track_width value."""
+    rows = len(grid)
+    cols = len(grid[0])
+    widths = []
+
+    for r in range(0, rows, 3):
+        for c in range(0, cols, 3):
+            if grid[r][c] != 1:  # 1 is road
+                continue
+            # Cast horizontally and vertically
+            for dr, dc in [(0, 1), (1, 0)]:
+                dist = 0
+                nr, nc = r, c
+                while 0 <= nr < rows and 0 <= nc < cols and grid[nr][nc] == 1:
+                    nr += dr
+                    nc += dc
+                    dist += 1
+                if dist > 1:
+                    widths.append(dist)
+
+    if not widths:
+        return 6  # fallback
+
+    widths.sort()
+    median = widths[len(widths) // 2]
+    # track_width step should be roughly half the track width
+    return max(2, median // 2)
+
 
 def analyze_track_from_grid(grid, track_width):
     centers = []
@@ -111,3 +140,41 @@ def generate_racing_line(analysis, offset_distance=0.4):
         racing_waypoints.append(coord)
     
     return racing_waypoints
+
+def chaikin_smooth(waypoints, iterations=4):
+    """
+    Chaikin's corner cutting algorithm.
+    Each iteration replaces each segment with two new points
+    at 25% and 75% along the segment, producing a smooth curve.
+    """
+    pts = [pt[:] for pt in waypoints]
+    
+    for _ in range(iterations):
+        new_pts = []
+        n = len(pts)
+        for i in range(n):
+            p0 = pts[i]
+            p1 = pts[(i + 1) % n]
+            
+            # Q: 25% along the segment
+            q = [
+                round(0.75 * p0[0] + 0.25 * p1[0]),
+                round(0.75 * p0[1] + 0.25 * p1[1])
+            ]
+            # R: 75% along the segment
+            r = [
+                round(0.25 * p0[0] + 0.75 * p1[0]),
+                round(0.25 * p0[1] + 0.75 * p1[1])
+            ]
+            new_pts.append(q)
+            new_pts.append(r)
+        pts = new_pts
+    
+    return pts
+def downsample_waypoints(waypoints, step=4):
+    """
+    Keep every nth point after smoothing.
+    step=4 undoes one Chaikin iteration (which doubles points),
+    so for 3 iterations use step=8, for 2 use step=4.
+    """
+    return waypoints[::step]

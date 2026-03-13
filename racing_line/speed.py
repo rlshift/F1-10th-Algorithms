@@ -42,7 +42,11 @@ def calculate_max_speeds(waypoints, corner_data, base_speed, min_corner_speed):
         if i == 0 or i == len(waypoints) - 1:
             max_speeds.append(base_speed * 0.5)
         else:
-            cp = corner_data[i]['cp']
+            # cp = corner_data[i]['cp']
+            if i < len(corner_data):
+                cp = corner_data[i]['cp']
+            else:
+                cp = 0
             
             if cp == 0:
                 max_speeds.append(base_speed)
